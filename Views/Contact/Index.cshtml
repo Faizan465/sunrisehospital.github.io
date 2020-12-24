@@ -1,4 +1,5 @@
-
+@model  Enquir
+@Html.AntiForgeryToken();
 			<div id="breadcrumb" class="division">
 				<div class="container">
 					<div class="row">						
@@ -36,10 +37,10 @@
 				 		<div class="col-lg-7">
 
 				 			<!-- Title-->
-				 			<h4 class="h4-md steelblue-color">Have a Question? We Review and Accept Patients Requests on 24/7 Basis.</h4>
+				 			<h4 class="h4-md steelblue-color">Have a Question? We Review and Accept Patients Requests on 24/7 </h4>
 
 				 			<!-- Text-->
-				 			<p class="contact-notice">Give us a call or send an email. If you are traveling to our clinic for an
+				 			<p class="contact-notice">Give us a call or send an email. If you are traveling to our Hospital for an
 				 			   appointment, confirm the correct street address with your appointment staff ahead of time to avoid
 				 			   frustration. For more help with specific addresses see below.
 				 			</p>
@@ -79,49 +80,55 @@
 						<!-- CONTACT FORM -->	
 				 		<div class="col-lg-5">
 				 			<div class="form-holder mb-40">
-								<form name="contactForm" class="row contact-form">
+								<form   asp-action="Create">
 				                                            
 					                <!-- Contact Form Input -->
-					                <div id="input-name" class="col-md-12">
-					                	<input type="text" name="name" class="form-control name" placeholder="Enter Your Name*" required> 
+					                <div  class="col-md-12">
+					                	<input type="text" asp-for="Name"   class="form-control " placeholder="Enter Your Name*" required> 
+										<span asp-validation-For="Name"  class="text-danger"></span> 
 					                </div>
 					                        
-					                <div id="input-email" class="col-md-12">
-					                	<input type="text" name="email" class="form-control email" placeholder="Enter Your Email*" required> 
+					                <div  class="col-md-12">
+					                	<input type="text"  asp-for="Email" class="form-control " placeholder="Enter Your Email*" required> 
+										<span asp-validation-For="Email"  class="text-danger"></span> 
 					                </div>
 
-					                <div id="input-phone" class="col-md-12">
-					                	<input type="tel" name="phone" class="form-control phone" placeholder="Enter Your Phone Number*" required> 
+					                <div class="col-md-12">
+					                	<input type="tel" asp-for="PhoneNumber"   class="form-control " placeholder="Enter Your Phone Number*" required>
+										<span asp-validation-For="PhoneNumber"  class="text-danger"></span>  
 					                </div>	
 
 					                <!-- Form Select -->
-					                <div id="input-patient" class="col-md-12 input-patient">
-					                    <select id="inlineFormCustomSelect3" name="patient" class="custom-select patient" required>
+					                <div  class="col-md-12 input-patient">
+					                    <select id="inlineFormCustomSelect3"  class="custom-select patient" required asp-for="Haveuvisitbefore" >
 					                        <option value="">Have You Visited Us Before?*</option>
 											<option>New Patient</option>
 											<option>Returning Patient</option>
 											<option>Other</option>
 					                    </select>
+										<span asp-validation-For="Haveuvisitbefore"  class="text-danger"></span> 
 					                </div>
 
-					                <div id="input-subject" class="col-md-12">
-					                	<input type="text" name="subject" class="form-control subject" placeholder="Subject*" required> 
+					                <div  class="col-md-12">
+					                	<input type="text" asp-for="Subject"   class="form-control" placeholder="Subject*" required>
+										<span asp-validation-For="Subject"  class="text-danger"></span>  
 					                </div>					                          
 					                        
-					                <div id="input-message" class="col-md-12 input-message">
-					                	<textarea class="form-control message" name="message" rows="6" placeholder="Your Message ..." required></textarea>
+					                <div  class="col-md-12 input-message">
+					                	<textarea class="form-control " asp-for="Message"   rows="6" placeholder="Your Message ..." required></textarea>
+										<span asp-validation-For="Message"  class="text-danger"></span> 
 					                </div> 
 					                                            
 					                <!-- Contact Form Button -->
 					                <div class="col-lg-12 mt-15 form-btn">  
-					                	<button type="submit" class="btn btn-blue blue-hover submit">Send Your Message</button> 
+					                <button class="btn btn-blue blue-hover submit" value="Send">Submit </button>
 					                </div>
 					                                                              
 					                <!-- Contact Form Message -->
 					                <div class="col-md-12 contact-form-msg text-center">
 					                	<div class="sending-msg"><span class="loading"></span></div>
 					                </div>  
-				                                              
+				                      <h5>@ViewBag.msg</h5>                        
 				                </form> 
 				 			</div>	
 				 		</div> 	<!-- END CONTACT FORM -->	
@@ -163,7 +170,7 @@
 			</section>	<!-- END BANNER-8 -->
  <div >
                 <div class="map">
-                <iframe width="1500" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=sunrise%20hospital%20awleshpur%20varanasi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe width="1500" height="700" id="gmap_canvas" src="https://maps.google.com/maps?q=sunrise%20hospital%20awleshpur%20varanasi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
             </div>
-        </div>
+      

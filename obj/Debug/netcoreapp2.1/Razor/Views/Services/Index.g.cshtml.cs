@@ -64,7 +64,7 @@ using sunrisehospital.Models;
 								    	<li class=""breadcrumb-item"">");
             EndContext();
             BeginContext(317, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6d2a6d37bd34c08937338e4d2d57979", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c31326edb8c6428bbdc0ff56ba64cd78", async() => {
                 BeginContext(366, 4, true);
                 WriteLiteral("Home");
                 EndContext();

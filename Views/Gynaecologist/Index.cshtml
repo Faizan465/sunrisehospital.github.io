@@ -9,7 +9,7 @@
 								  	<ol class="breadcrumb">
 								    	<li class="breadcrumb-item"><a asp-Controller ="Home" asp-Action="Index">Home</a></li>
 								    	<li class="breadcrumb-item"><a asp-Controller ="Gynaecologist" asp-Action="Index">Departments</a></li>
-								    	<li class="breadcrumb-item active" aria-current="page">Cardiology</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Gynaecology & Obstetrics</li>
 								  	</ol>
 								</nav>
 
@@ -85,7 +85,7 @@
 
 									<!-- Image -->
 									<div class="content-block-img">
-										<img class="img-fluid" src="images/gynae.jpg" alt="content-image">
+										<img class="img-fluid" src="images/gynae.jpg" alt="content-image" >
 									</div>
 
 									<!-- Small Title -->
@@ -247,13 +247,13 @@
 								
 									<!-- Avatar -->
 									<div class="txt-widget-avatar">
-										<img src="images/sir1.jpg" alt="testimonial-avatar">
+										<img src="images/dpsir.jpg" alt="testimonial-avatar">
 									</div>
 
 									<!-- Data -->
 									<div class="txt-widget-data">
 										<h5 class="h5-md steelblue-color">Dr. Abhinav Katiyar</h5>	
-										<span>Director, Founder</span>	
+										<span>Director</span>	
 										<p class="blue-color">+91 9634425888</p>	
 									</div>
 
@@ -263,7 +263,7 @@
 								
 
 								<!-- Button -->
-								<a asp-Controller ="About" asp-Action="Index" class="btn btn-blue blue-hover">Learn More</a>
+								<a asp-Controller ="DrAbhinavKatiyar" asp-Action="Index" class="btn btn-blue blue-hover">Learn More</a>
 																		
 							</div>	<!-- END TEXT WIDGET -->
 
@@ -349,74 +349,107 @@
 					</div>	 <!-- END SECTION TITLE -->	
 
 
-					<div class="row">
+                    <div class="row">
 
 
-						<!-- DOCTOR #1 -->
-						<div class="col-md-6 col-lg-3">
-							<div class="doctor-1">								
-														
-								<!-- Doctor Photo -->
-								<div class="hover-overlay text-center"> 
-
-									<!-- Photo -->
-									<img class="img-fluid" src="images/noimage.jpg" alt="doctor-foto">	
-									<div class="item-overlay"></div>
-
-									<!-- Profile Link -->		
-									<div class="profile-link">
-										<a class="btn btn-sm btn-tra-white black-hover" asp-Controller ="Home" asp-Action="Index" title="">View More Info</a>
-									</div> 
-
-								</div>	
-
-								<!-- Doctor Meta -->		
-								<div class="doctor-meta">
-
-									<h5 class="h5-sm steelblue-color">Dr Anupama Goyal</h5>
-									<span class="blue-color">Gynaecologist & Obstetrics</span>
-
-									<p class="p-sm grey-color">MBBS,DGO
-									</p>
-
-								</div>	
-
-							</div>								
-						</div>
-                        
+                        <!-- DOCTOR #1 -->
                         <div class="col-md-6 col-lg-3">
-							<div class="doctor-1">								
-														
-								<!-- Doctor Photo -->
-								<div class="hover-overlay text-center"> 
+                            <div class="doctor-1">
 
-									<!-- Photo -->
-									<img class="img-fluid" src="images/noimage.jpg" alt="doctor-foto">	
-									<div class="item-overlay"></div>
+                                <!-- Doctor Photo -->
+                                <div class="hover-overlay text-center">
 
-									<!-- Profile Link -->		
-									<div class="profile-link">
-										<a class="btn btn-sm btn-tra-white black-hover" asp-Controller ="Home" asp-Action="Index" title="">View More Info</a>
-									</div> 
+                                    <!-- Photo -->
+                                    <img class="img-fluid" src="images/noimage.jpg" alt="doctor-foto">
+                                    <div class="item-overlay"></div>
 
-								</div>	
+                                    <!-- Profile Link -->
+                                    <div class="profile-link">
+                                        <a class="btn btn-sm btn-tra-white black-hover" asp-Controller="Home" asp-Action="Index" title="">View More Info</a>
+                                    </div>
 
-								<!-- Doctor Meta -->		
-								<div class="doctor-meta">
+                                </div>
 
-									<h5 class="h5-sm steelblue-color">Dr Manjari Gupta Goyal</h5>
-									<span class="blue-color">Gynaecologist & Obstetrics</span>
+                                <!-- Doctor Meta -->
+                                <div class="doctor-meta">
 
-									<p class="p-sm grey-color">MBBS,DGO
-									</p>
+                                    <h5 class="h5-sm steelblue-color">Dr Anupama Goyal</h5>
+                                    <span class="blue-color">Gynaecologist & Obstetrics</span>
 
-								</div>	
+                                    <p class="p-sm grey-color">
+                                        MBBS,DGO
+                                    </p>
 
-							</div>								
-						</div>
-						
-						
-					</div><!-- End row -->
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="doctor-1">
+
+                                <!-- Doctor Photo -->
+                                <div class="hover-overlay text-center">
+
+                                    <!-- Photo -->
+                                    <img class="img-fluid" src="images/noimage.jpg" alt="doctor-foto">
+                                    <div class="item-overlay"></div>
+
+                                    <!-- Profile Link -->
+                                    <div class="profile-link">
+                                        <a class="btn btn-sm btn-tra-white black-hover" asp-Controller="Home" asp-Action="Index" title="">View More Info</a>
+                                    </div>
+
+                                </div>
+
+                                <!-- Doctor Meta -->
+                                <div class="doctor-meta">
+
+                                    <h5 class="h5-sm steelblue-color">Dr Manjari Gupta Goyal</h5>
+                                    <span class="blue-color">Gynaecologist & Obstetrics</span>
+
+                                    <p class="p-sm grey-color">
+                                        MBBS,DGO
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="doctor-1">
+
+                                <!-- Doctor Photo -->
+                                <div class="hover-overlay text-center">
+
+                                    <!-- Photo -->
+                                    <img class="img-fluid" src="images/noimage.jpg" alt="doctor-foto">
+                                    <div class="item-overlay"></div>
+
+                                    <!-- Profile Link -->
+                                    <div class="profile-link">
+                                        <a class="btn btn-sm btn-tra-white black-hover" asp-Controller="Home" asp-Action="Index" title="">View More Info</a>
+                                    </div>
+
+                                </div>
+
+                                <!-- Doctor Meta -->
+                                <div class="doctor-meta">
+
+                                    <h5 class="h5-sm steelblue-color">Dr Vijaya Jha</h5>
+                                    <span class="blue-color">Gynaecologist & Obstetrics</span>
+
+                                    <p class="p-sm grey-color">
+                                        MBBS,DGO
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div><!-- End row -->
 
 
 					<!-- ALL DOCTORS BUTTON -->		

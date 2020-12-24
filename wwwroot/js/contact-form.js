@@ -5,63 +5,63 @@ $(document).ready(function() {
 
     $(".contact-form").submit(function(e) {
         e.preventDefault();
-        var name = $(".name");
-        var email = $(".email");
-        var phone = $(".phone");
-        var patient = $(".patient");
-        var subject = $(".subject");
-        var msg = $(".message");
+        var Name = $(".Name");
+        var Email = $(".Email");
+        var PhoneNumber = $(".PhoneNumber");
+        var Haveuvisitbefore = $(".Haveuvisitbefore");
+        var Subject = $(".Subject");
+        var Message = $(".Message");
         var flag = false;
-        if (name.val() == "") {
-            name.closest(".form-control").addClass("error");
-            name.focus();
+        if (Name.val() == "") {
+            Name.closest(".form-control").addClass("error");
+            Name.focus();
             flag = false;
             return false;
         } else {
-            name.closest(".form-control").removeClass("error").addClass("success");
-        } if (email.val() == "") {
-            email.closest(".form-control").addClass("error");
-            email.focus();
+            Name.closest(".form-control").removeClass("error").addClass("success");
+        } if (Email.val() == "") {
+            Email.closest(".form-control").addClass("error");
+            Email.focus();
             flag = false;
             return false;
         } else {
-            email.closest(".form-control").removeClass("error").addClass("success");
-        } if (phone.val() == "") {
-            phone.closest(".form-control").addClass("error");
-            phone.focus();
+            Email.closest(".form-control").removeClass("error").addClass("success");
+        } if (Phonemunber.val() == "") {
+            Phonemunber.closest(".form-control").addClass("error");
+            Phonemunber.focus();
             flag = false;
             return false;
         } else {
-            phone.closest(".form-control").removeClass("error").addClass("success");
-        } if (patient.val() == "") {
-            patient.closest(".form-control").addClass("error");
-            patient.focus();
+            Phonemunber.closest(".form-control").removeClass("error").addClass("success");
+        } if (Haveuvisitbefore.val() == "") {
+            Haveuvisitbefore.closest(".form-control").addClass("error");
+            Haveuvisitbefore.focus();
+            Haveuvisitbefore = false;
+            return false;
+        } else {
+            Haveuvisitbefore.closest(".form-control").removeClass("error").addClass("success");
+        } if (Subject.val() == "") {
+            Subject.closest(".form-control").addClass("error");
+            Subject.focus();
             flag = false;
             return false;
         } else {
-            patient.closest(".form-control").removeClass("error").addClass("success");
-        } if (subject.val() == "") {
-            subject.closest(".form-control").addClass("error");
-            subject.focus();
+            Subject.closest(".form-control").removeClass("error").addClass("success");
+        } if (Message.val() == "") {
+            Message.closest(".form-control").addClass("error");
+            Message.focus();
             flag = false;
             return false;
         } else {
-            subject.closest(".form-control").removeClass("error").addClass("success");
-        } if (msg.val() == "") {
-            msg.closest(".form-control").addClass("error");
-            msg.focus();
-            flag = false;
-            return false;
-        } else {
-            msg.closest(".form-control").removeClass("error").addClass("success");
+            Message.closest(".form-control").removeClass("error").addClass("success");
             flag = true;
         }
-        var dataString = "name=" + name.val() + "&email=" + email.val() + "&phone=" + phone.val() + "&patient=" + patient.val() + "&subject=" + subject.val() + "&msg=" + msg.val();
+        var dataString = "Name=" + Name.val() + "&Email=" + Email.val() + "&Phonemunber=" + Phonemunber.val() + "&Haveuvisitbefore=" + Haveuvisitbefore.val() + "&Subject=" + Subject.val() + "&Message=" + Message.val();
         $(".loading").fadeIn("slow").html("Loading...");
         $.ajax({
             type: "POST",
             data: dataString,
-            url: "php/contactForm.php",
+            url: "@Url.Action('Contact','Create')",
             cache: false,
             success: function (d) {
                 $(".form-control").removeClass("success");
